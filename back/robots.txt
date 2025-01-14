@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /login/
+Disallow: /404/
+Disallow: /error/
+
+Sitemap: https://399keratintreatment.com/sitemap.xml
