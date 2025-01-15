@@ -1,32 +1,134 @@
 <div class="container">
-    <h4 class="dv_fre_ask_heading">{!! $get_data_section_10->description !!}</h4>
+    @php
+        // dd($data[9]);
+        $index = 0;
+    @endphp
+    <h4 class="dv_fre_ask_heading">{!! $data[9]->text_details[0]->header !!}</h4>
     <div class="row">
         <div class="col-md-12">
             <div id="accordion" role="tablist" aria-multiselectable="true" class="panel-group">
-                <?php foreach (json_decode($get_data_section_10->point_wise_details) as $index => $content): ?>
-                    <?php
-                    // Split the question and answer using the colon `:` separator
-                    // Add a fallback in case the split fails (to prevent errors)
-                    list($question, $answer) = explode(':', $content, 2) + [null, null];
-                    ?>
-                    <div class="panel panel-default">
-                        <div role="tab" id="heading<?= $index + 1 ?>" class="panel-heading">
-                            <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion"
-                                   href="#collapse<?= $index + 1 ?>" aria-expanded="false"
-                                   aria-controls="collapse<?= $index + 1 ?>" class="collapsed dv_accodion">
-                                     <?= htmlspecialchars($question) ?>
-                                </a>
-                            </h4>
-                        </div>
-                        <div id="collapse<?= $index + 1 ?>" role="tabpanel"
-                             aria-labelledby="heading<?= $index + 1 ?>" class="panel-collapse collapse">
-                            <div class="panel-body dv_accodion_body">
-                                <?= nl2br(htmlspecialchars($answer)) ?>
-                            </div>
+
+                <div class="panel panel-default">
+                    <div role="tab" id="heading1" class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="false"
+                                aria-controls="collapse1" class="collapsed dv_accodion">
+                                <?= htmlspecialchars($data[9]->key_value_pair[0]->key) ?>
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse1" role="tabpanel" aria-labelledby="heading1" class="panel-collapse collapse">
+                        <div class="panel-body dv_accodion_body">
+                            <?= nl2br(htmlspecialchars($data[9]->key_value_pair[0]->value)) ?>
                         </div>
                     </div>
-                <?php endforeach; ?>
+                </div>
+                <div class="panel panel-default">
+                    <div role="tab" id="heading2" class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="false"
+                                aria-controls="collapse2" class="collapsed dv_accodion">
+                                <?= htmlspecialchars($data[9]->key_value_pair[1]->key) ?>
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse2" role="tabpanel" aria-labelledby="heading2" class="panel-collapse collapse">
+                        <div class="panel-body dv_accodion_body">
+                            <?= nl2br(htmlspecialchars($data[9]->key_value_pair[1]->value)) ?>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div role="tab" id="heading3" class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="false"
+                                aria-controls="collapse3" class="collapsed dv_accodion">
+                                <?= htmlspecialchars($data[9]->key_value_pair[2]->key) ?>
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse3" role="tabpanel" aria-labelledby="heading3" class="panel-collapse collapse">
+                        <div class="panel-body dv_accodion_body">
+                            <?= nl2br(htmlspecialchars($data[9]->key_value_pair[2]->value)) ?>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div role="tab" id="heading4" class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse4" aria-expanded="false"
+                                aria-controls="collapse4" class="collapsed dv_accodion">
+                                <?= htmlspecialchars($data[9]->key_value_pair[3]->key) ?>
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse4" role="tabpanel" aria-labelledby="heading4" class="panel-collapse collapse">
+                        <div class="panel-body dv_accodion_body">
+                            <?= nl2br(htmlspecialchars($data[9]->key_value_pair[3]->value)) ?>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div role="tab" id="heading5" class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse5" aria-expanded="false"
+                                aria-controls="collapse5" class="collapsed dv_accodion">
+                                <?= htmlspecialchars($data[9]->key_value_pair[4]->key) ?>
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse5" role="tabpanel" aria-labelledby="heading5" class="panel-collapse collapse">
+                        <div class="panel-body dv_accodion_body">
+                            <?= nl2br(htmlspecialchars($data[9]->key_value_pair[4]->value)) ?>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div role="tab" id="heading6" class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse6" aria-expanded="false"
+                                aria-controls="collapse6" class="collapsed dv_accodion">
+                                <?= htmlspecialchars($data[9]->key_value_pair[5]->key) ?>
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse6" role="tabpanel" aria-labelledby="heading6" class="panel-collapse collapse">
+                        <div class="panel-body dv_accodion_body">
+                            <?= nl2br(htmlspecialchars($data[9]->key_value_pair[5]->value)) ?>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div role="tab" id="heading7" class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse7"
+                                aria-expanded="false" aria-controls="collapse7" class="collapsed dv_accodion">
+                                <?= htmlspecialchars($data[9]->key_value_pair[6]->key) ?>
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse7" role="tabpanel" aria-labelledby="heading7" class="panel-collapse collapse">
+                        <div class="panel-body dv_accodion_body">
+                            <?= nl2br(htmlspecialchars($data[9]->key_value_pair[6]->value)) ?>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div role="tab" id="heading8" class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse8"
+                                aria-expanded="false" aria-controls="collapse8" class="collapsed dv_accodion">
+                                <?= htmlspecialchars($data[9]->key_value_pair[7]->key) ?>
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse8" role="tabpanel" aria-labelledby="heading8" class="panel-collapse collapse">
+                        <div class="panel-body dv_accodion_body">
+                            <?= nl2br(htmlspecialchars($data[9]->key_value_pair[7]->value)) ?>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>

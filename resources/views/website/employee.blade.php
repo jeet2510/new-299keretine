@@ -1,22 +1,23 @@
 <div _ngcontent-mro-c11="" class="container">
     @php
+        // dd($data[7]);
         $imagePaths = json_decode($get_data_section_8->employee_image, true) ?? [];
         $employeeNames = json_decode($get_data_section_8->employee_name, true) ?? [];
+
         $employeeSpecialists = json_decode($get_data_section_8->employee_specialist, true) ?? [];
     @endphp
 
     <div class="row display-none-sm">
-        @foreach ($imagePaths as $index => $imagePath)
-            @if ($index % 3 == 0 && $index > 0)
-    </div>
-    <div class="row display-none-sm">
-        @endif
 
         <div class="col-md-4 col-sm-6 col-xs-12 col-12 mb-4">
             <div class="d-block w-80 ml-auto mr-auto pb-5">
-                <img src="{{ $link_project->site_value . $imagePath }}" class="w-100" alt="Employee Image">
-                <h4 class="d-block text-center">{{ $employeeNames[$index] ?? 'Name Not Available' }}</h4>
-                <p class="d-block text-center">{{ $employeeSpecialists[$index] ?? 'Specialist Not Available' }}</p>
+                <img src="{{ $link_project->site_value . $data[7]->image_details->{1}->file_path }}" class="w-100"
+                    alt="Employee Image">
+                <h4 class="d-block text-center">
+                    {{ $data[7]->image_details->{1}->title ?? 'Name Not Available' }}</h4>
+                <p class="d-block text-center">
+                    {{ $data[7]->image_details->{1}->description ?? 'Specialist Not Available' }}
+                </p>
                 <ul class="dv_staff_social">
                     <li><a href="https://www.facebook.com/mirrorbeautylounge" target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -41,7 +42,172 @@
                 </ul>
             </div>
         </div>
-        @endforeach
+        <div class="col-md-4 col-sm-6 col-xs-12 col-12 mb-4">
+            <div class="d-block w-80 ml-auto mr-auto pb-5">
+                <img src="{{ $link_project->site_value . $data[7]->image_details->{2}->file_path }}" class="w-100"
+                    alt="Employee Image">
+                <h4 class="d-block text-center">
+                    {{ $data[7]->image_details->{2}->title ?? 'Name Not Available' }}</h4>
+                <p class="d-block text-center">
+                    {{ $data[7]->image_details->{2}->description ?? 'Specialist Not Available' }}
+                </p>
+                <ul class="dv_staff_social">
+                    <li><a href="https://www.facebook.com/mirrorbeautylounge" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3">
+                                </path>
+                            </svg>
+                        </a></li>
+                    <li><a href="https://www.instagram.com/mirrorsbeautylounge" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z">
+                                </path>
+                                <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+                                <path d="M16.5 7.5l0 .01"></path>
+                            </svg>
+                        </a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12 col-12 mb-4">
+            <div class="d-block w-80 ml-auto mr-auto pb-5">
+                <img src="{{ $link_project->site_value . $data[7]->image_details->{3}->file_path }}" class="w-100"
+                    alt="Employee Image">
+                <h4 class="d-block text-center">
+                    {{ $data[7]->image_details->{3}->title ?? 'Name Not Available' }}</h4>
+                <p class="d-block text-center">
+                    {{ $data[7]->image_details->{3}->description ?? 'Specialist Not Available' }}
+                </p>
+                <ul class="dv_staff_social">
+                    <li><a href="https://www.facebook.com/mirrorbeautylounge" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3">
+                                </path>
+                            </svg>
+                        </a></li>
+                    <li><a href="https://www.instagram.com/mirrorsbeautylounge" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z">
+                                </path>
+                                <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+                                <path d="M16.5 7.5l0 .01"></path>
+                            </svg>
+                        </a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12 col-12 mb-4">
+            <div class="d-block w-80 ml-auto mr-auto pb-5">
+                <img src="{{ $link_project->site_value . $data[7]->image_details->{4}->file_path }}" class="w-100"
+                    alt="Employee Image">
+                <h4 class="d-block text-center">
+                    {{ $data[7]->image_details->{4}->title ?? 'Name Not Available' }}</h4>
+                <p class="d-block text-center">
+                    {{ $data[7]->image_details->{4}->description ?? 'Specialist Not Available' }}
+                </p>
+                <ul class="dv_staff_social">
+                    <li><a href="https://www.facebook.com/mirrorbeautylounge" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3">
+                                </path>
+                            </svg>
+                        </a></li>
+                    <li><a href="https://www.instagram.com/mirrorsbeautylounge" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z">
+                                </path>
+                                <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+                                <path d="M16.5 7.5l0 .01"></path>
+                            </svg>
+                        </a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12 col-12 mb-4">
+            <div class="d-block w-80 ml-auto mr-auto pb-5">
+                <img src="{{ $link_project->site_value . $data[7]->image_details->{5}->file_path }}" class="w-100"
+                    alt="Employee Image">
+                <h4 class="d-block text-center">
+                    {{ $data[7]->image_details->{5}->title ?? 'Name Not Available' }}</h4>
+                <p class="d-block text-center">
+                    {{ $data[7]->image_details->{5}->description ?? 'Specialist Not Available' }}
+                </p>
+                <ul class="dv_staff_social">
+                    <li><a href="https://www.facebook.com/mirrorbeautylounge" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3">
+                                </path>
+                            </svg>
+                        </a></li>
+                    <li><a href="https://www.instagram.com/mirrorsbeautylounge" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z">
+                                </path>
+                                <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+                                <path d="M16.5 7.5l0 .01"></path>
+                            </svg>
+                        </a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12 col-12 mb-4">
+            <div class="d-block w-80 ml-auto mr-auto pb-5">
+                <img src="{{ $link_project->site_value . $data[7]->image_details->{6}->file_path }}" class="w-100"
+                    alt="Employee Image">
+                <h4 class="d-block text-center">
+                    {{ $data[7]->image_details->{6}->title ?? 'Name Not Available' }}</h4>
+                <p class="d-block text-center">
+                    {{ $data[7]->image_details->{6}->description ?? 'Specialist Not Available' }}
+                </p>
+                <ul class="dv_staff_social">
+                    <li><a href="https://www.facebook.com/mirrorbeautylounge" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3">
+                                </path>
+                            </svg>
+                        </a></li>
+                    <li><a href="https://www.instagram.com/mirrorsbeautylounge" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z">
+                                </path>
+                                <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+                                <path d="M16.5 7.5l0 .01"></path>
+                            </svg>
+                        </a></li>
+                </ul>
+            </div>
+        </div>
+
     </div>
 
 
@@ -64,8 +230,8 @@
                                 <ul _ngcontent-mro-c11="" class="dv_staff_social">
                                     <li _ngcontent-mro-c11=""><a _ngcontent-mro-c11=""
                                             href="https://www.facebook.com/mirrorbeautylounge" target="_blank"><svg
-                                                _ngcontent-mro-c11="" xmlns="http://www.w3.org/2000/svg" width="24"
-                                                height="24" viewBox="0 0 24 24" stroke-width="1.5"
+                                                _ngcontent-mro-c11="" xmlns="http://www.w3.org/2000/svg"
+                                                width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5"
                                                 stroke="currentColor" fill="none" stroke-linecap="round"
                                                 stroke-linejoin="round"
                                                 class="icon icon-tabler icon-tabler-brand-facebook">
@@ -77,8 +243,8 @@
                                             </svg></a></li>
                                     <li _ngcontent-mro-c11=""><a _ngcontent-mro-c11=""
                                             href="https://www.instagram.com/mirrorsbeautylounge"><svg
-                                                _ngcontent-mro-c11="" xmlns="http://www.w3.org/2000/svg" width="24"
-                                                height="24" viewBox="0 0 24 24" stroke-width="1.5"
+                                                _ngcontent-mro-c11="" xmlns="http://www.w3.org/2000/svg"
+                                                width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5"
                                                 stroke="currentColor" fill="none" stroke-linecap="round"
                                                 stroke-linejoin="round"
                                                 class="icon icon-tabler icon-tabler-brand-instagram">

@@ -6,6 +6,7 @@
 </head>
 
 <body>
+
     <app-root _nghost-mro-c12="" ng-version="14.3.0">
         <router-outlet _ngcontent-mro-c12="">
         </router-outlet><app-home _nghost-mro-c11="">
@@ -57,66 +58,46 @@
                     <div _ngcontent-mro-c11="" class="dv_slider">
                         @include('website.Hero')
                     </div>
+
                     <div _ngcontent-mro-c11="" class="dv_why_package">
-                        @include(
-                            'website.why_package',
-                            ['get_data_section_2' => $get_data_section_2],
-                            ['link_project' => $link_project]
-                        )
+                        @include('website.why_package')
                     </div>
                     <div _ngcontent-mro-c11="" class="dv_price_table pt-0">
-                        @include('website.price_table', ['get_data_section_3' => $get_data_section_3])
+                        @include('website.price_table')
                     </div>
                     <div _ngcontent-mro-c11="" class="dv_we_accept">
-                        @include('website.we_accept', ['get_data_section_4' => $get_data_section_4])
+                        @include('website.we_accept')
                     </div>
+
                     <div _ngcontent-mro-c11="" class="dv_video_black">
                         <div _ngcontent-mro-c11="" class="container"><video _ngcontent-mro-c11="" preload=""
                                 autoplay="" muted="" loop="" playsinline="" poster=""
                                 controlslist="nofullscreen" class="display-none-sm"
                                 style="width: 100%; height: auto;">
-                                <source _ngcontent-mro-c11=""
-                                    src="https://ik.imagekit.io/mirrorskit/assets/keratin/img/aed-399-499/desktop-video.mp4"
+                                <source _ngcontent-mro-c11="" src="{{ $data[4]->video_details->{1}->url }}"
                                     type="video/mp4"> Your browser does not support the video tag.
                             </video><video _ngcontent-mro-c11="" preload="" autoplay="" muted=""
                                 loop="" playsinline="" poster="" controlslist="nofullscreen"
                                 class="display-block-sm" style="width: 100%; height: auto;">
-                                <source _ngcontent-mro-c11=""
-                                    src="https://ik.imagekit.io/mirrorskit/assets/keratin/img/aed-399-499/mobile-video.mp4"
+                                <source _ngcontent-mro-c11="" src="{{ $data[4]->video_details->{2}->url }}"
                                     type="video/mp4"> Your browser does not support the video tag.
                             </video></div>
                     </div>
                     <div _ngcontent-mro-c11="" class="dv_why_package pt-5">
-                        @include(
-                            'website.know_best',
-                            ['get_data_section_6' => $get_data_section_6],
-                            ['link_project' => $link_project]
-                        )
+                        @include('website.know_best')
                     </div>
                     <div _ngcontent-mro-c11="" class="dv_thousand_review">
-                        @include(
-                            'website.review',
-                            ['get_data_section_7' => $get_data_section_7],
-                            ['link_project' => $link_project]
-                        )
+                        @include('website.review')
                     </div>
                     <div _ngcontent-mro-c11="" class="dv_staff_mirrors bg-light">
-                        @include(
-                            'website.employee',
-                            ['get_data_section_8' => $get_data_section_8],
-                            ['link_project' => $link_project]
-                        )
+                        @include('website.employee')
                     </div>
                     <div _ngcontent-mro-c11="" id="location" class="dv_branch_499">
-                        @include(
-                            'website.branch',
-                            ['get_data_section_9' => $get_data_section_9],
-                            ['link_project' => $link_project]
-                        )
+                        @include('website.branch')
                     </div>
                 </div>
                 <div _ngcontent-mro-c11="" id="faq" class="dv_frequrently_asked">
-                    @include('website.ask_que', ['get_data_section_10' => $get_data_section_10])
+                    @include('website.ask_que')
                 </div>
             </div>
             @include('website.footer_section')

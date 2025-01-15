@@ -1,5 +1,5 @@
 <footer _ngcontent-mro-c11="">
-    <div _ngcontent-mro-c11="" class="container"> © 2018-2025 Mirrors All rights reserved. </div>
+    <div _ngcontent-mro-c11="" class="container"> {{ $data[10]->text_details[0]->header }} </div>
 </footer>
 {{-- <ul _ngcontent-mro-c11="" class="dv_sticky_whatsa_livechat">
     <li _ngcontent-mro-c11=""><a _ngcontent-mro-c11="" href="javascript:void(0);" data-toggle="modal"

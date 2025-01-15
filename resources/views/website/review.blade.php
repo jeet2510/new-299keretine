@@ -1,19 +1,26 @@
 <div _ngcontent-mro-c11="" class="dv_thousand_review">
     <div _ngcontent-mro-c11="" class="container">
-        <h4 _ngcontent-mro-c11="" class="dv_thousand_review_head">{{ $get_data_section_7->handing }} </h4>
+        <h4 _ngcontent-mro-c11="" class="dv_thousand_review_head">{{ $data[6]->text_details[0]->header }} </h4>
         <div _ngcontent-mro-c11="" class="row pt-5 pb-5 display-none-sm">
             <div _ngcontent-mro-c11="" class="col-md-12">
                 <div class="row pt-5 pb-5 display-none-sm">
-                    @php
-                        $imagePaths = json_decode($get_data_section_7->image, true) ?? [];
-                    @endphp
 
-                    @foreach ($imagePaths as $imagePath)
-                        <div _ngcontent-mro-c11="" class="col-md-4">
-                            <img _ngcontent-mro-c11="" src="{{ $link_project->site_value . $imagePath }}"
-                                class="w-80 d-block ml-auto mr-auto">
-                        </div>
-                    @endforeach
+                    <div _ngcontent-mro-c11="" class="col-md-4">
+                        <img _ngcontent-mro-c11=""
+                            src="{{ $link_project->site_value . $data[6]->image_details->{1}->file_path }}"
+                            class="w-80 d-block ml-auto mr-auto">
+                    </div>
+                    <div _ngcontent-mro-c11="" class="col-md-4">
+                        <img _ngcontent-mro-c11=""
+                            src="{{ $link_project->site_value . $data[6]->image_details->{2}->file_path }}"
+                            class="w-80 d-block ml-auto mr-auto">
+                    </div>
+                    <div _ngcontent-mro-c11="" class="col-md-4">
+                        <img _ngcontent-mro-c11=""
+                            src="{{ $link_project->site_value . $data[6]->image_details->{3}->file_path }}"
+                            class="w-80 d-block ml-auto mr-auto">
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -26,21 +33,21 @@
                         <div data-swiper-slide-index="0" class="dv_per_staff_col swiper-slide">
                             <!---->
                             <div _ngcontent-mro-c11="" class="swiper-slide"><img _ngcontent-mro-c11=""
-                                    src="https://ik.imagekit.io/mirrorskit/assets/keratin/img/aed-399-499/insta-desktop.jpg"
+                                    src="{{ $link_project->site_value . $data[6]->image_details->{1}->file_path }}"
                                     class="w-80 d-block ml-auto mr-auto"></div>
                             <!----><!----><!---->
                         </div>
                         <div data-swiper-slide-index="1" class="dv_per_staff_col swiper-slide">
                             <!---->
                             <div _ngcontent-mro-c11="" class="swiper-slide"><img _ngcontent-mro-c11=""
-                                    src="https://ik.imagekit.io/mirrorskit/assets/keratin/img/aed-399-499/google-desktop.jpg"
+                                    src="{{ $link_project->site_value . $data[6]->image_details->{2}->file_path }}"
                                     class="w-80 d-block ml-auto mr-auto"></div>
                             <!----><!----><!---->
                         </div>
                         <div data-swiper-slide-index="2" class="dv_per_staff_col swiper-slide">
                             <!---->
                             <div _ngcontent-mro-c11="" class="swiper-slide"><img _ngcontent-mro-c11=""
-                                    src="https://ik.imagekit.io/mirrorskit/assets/keratin/img/aed-399-499/facebook-desktop.jpg"
+                                    src="{{ $link_project->site_value . $data[6]->image_details->{3}->file_path }}"
                                     class="w-80 d-block ml-auto mr-auto"></div>
                             <!----><!----><!---->
                         </div><!----><!----><!----><!---->

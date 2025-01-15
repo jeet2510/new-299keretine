@@ -1,33 +1,42 @@
 <div _ngcontent-mro-c11="" class="container">
     <div _ngcontent-mro-c11="" class="row">
-        @php
-            $imagePath = json_decode($get_data_section_2->image, true)[0] ?? '';
-        @endphp
+
         <div _ngcontent-mro-c11="" class="col-md-5 p-0 pl-sm-4 display-none-sm"><img _ngcontent-mro-c11=""
-            src="{{ $link_project->site_value . $imagePath }}"  class="w-100">
+                src="{{ $link_project->site_value . $data[1]->image_details->{1}->file_path }}" class="w-100">
         </div>
         <div _ngcontent-mro-c11="" class="col-md-1 p-0 display-none-sm"></div>
         <div _ngcontent-mro-c11="" class="col-md-6">
-            <div _ngcontent-mro-c11="" class="dv_why_package_heading"> {{ $get_data_section_2->title }}<span
+            <div _ngcontent-mro-c11="" class="dv_why_package_heading"> {{ $data[1]->text_details[0]->header }}<span
                     _ngcontent-mro-c11="">
-                    {{ $get_data_section_2->handing }}</span></div>
-            <p _ngcontent-mro-c11="" class="dv_why_package_heading_p">{{ $get_data_section_2->meta_text }}</p>
-            @php
-            $pointWiseDetails = json_decode($get_data_section_2->point_wise_details, true); // Decode JSON to an associative array
-        @endphp
+                    {{ $data[1]->text_details[0]->title }}</span></div>
+            <p _ngcontent-mro-c11="" class="dv_why_package_heading_p">{{ $data[1]->text_details[0]->description }}</p>
 
-        <ul _ngcontent-mro-c11="" class="dv_why_pack_ul">
-            @foreach ($pointWiseDetails as $key => $value)
+
+            <ul _ngcontent-mro-c11="" class="dv_why_pack_ul">
+
                 <li _ngcontent-mro-c11="">
-                    <span _ngcontent-mro-c11="">{{ $loop->index + 1 }}</span> {{ $value }}
+                    <span _ngcontent-mro-c11="">{{ $data[1]->key_value_pair[0]->key }}</span>
+                    {{ $data[1]->key_value_pair[0]->value }}
                 </li>
-            @endforeach
-        </ul>
+                <li _ngcontent-mro-c11="">
+                    <span _ngcontent-mro-c11="">{{ $data[1]->key_value_pair[1]->key }}</span>
+                    {{ $data[1]->key_value_pair[1]->value }}
+                </li>
+                <li _ngcontent-mro-c11="">
+                    <span _ngcontent-mro-c11="">{{ $data[1]->key_value_pair[2]->key }}</span>
+                    {{ $data[1]->key_value_pair[2]->value }}
+                </li>
+                <li _ngcontent-mro-c11="">
+                    <span _ngcontent-mro-c11="">{{ $data[1]->key_value_pair[3]->key }}</span>
+                    {{ $data[1]->key_value_pair[3]->value }}
+                </li>
 
-            <a _ngcontent-mro-c11=""
-                href="{{ $get_data_section_2->button_link }}" target="_blank"
-                class="dv_why_book_now">{{ $get_data_section_2->button_text }} <span _ngcontent-mro-c11="">{!! $get_data_section_2->description !!} </span></a>
-            <div _ngcontent-mro-c11="" class="dv_dmof_txt">{{ ($get_data_section_2->button_details); }} </div>
+            </ul>
+
+            <a _ngcontent-mro-c11="" href="{{ $data[1]->button_details->{1}->redirect_url }}" target="_blank"
+                class="dv_why_book_now">{{ $data[1]->button_details->{1}->title }} <span
+                    _ngcontent-mro-c11="">{!! $data[1]->button_details->{1}->description !!} </span></a>
+            <div _ngcontent-mro-c11="" class="dv_dmof_txt">{{ $data[1]->text_details[0]->extrafield }} </div>
         </div>
     </div>
     <div _ngcontent-mro-c11="" class="row display-block-sm">

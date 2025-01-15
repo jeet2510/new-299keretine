@@ -65,7 +65,6 @@ class HomeController extends Controller
             $list->key_value_pair = json_decode($list->key_value_pair);
             $list->main_url = $main_url;
         }
-        // dd($data);
 
         return view('welcome', compact('data', 'get_data_section_8', 'get_data_section_10', 'get_data_section_7', 'get_data_section_1', 'get_data_section_2', 'get_data_section_4', 'get_data_section_3', 'link_project', 'get_data_section_6', 'get_data_section_8', 'get_data_section_9'));
     }
